@@ -1,0 +1,42 @@
+1. Write a blog on Difference between HTTP1.1 vs HTTP2
+-> HTTP- Hypertext Transfer Protocol
+-> HTTP1.1 - 
+  . HTTP1.1 transfers all requests and responses in plain text message format
+  . In this version the TCP connection blocks all other requests until the response does not receive all the information related to the header file is repeated in every request.
+  . It uses requests resource inlining for getting multiple pages. Resource inlining helps reduce the number of outbound requests by embedding the resource within the document itself.
+  . It compresses the data itself.
+  . Vulnerable to response splitting attacks, which enables an attacker to inject a white space into textual response of resonse header.
+-> HTTP2 -
+  . HTTP2 was developed over the SPDY protocol which is also called speedy protocol.
+  . It transfers all requests and responses in using 1s and 0s.
+  . One TCP connection is required for multiple requests which is called multiplexing.
+  . The server can send additional information needed for a request before it is requested.
+  . It uses HPACK(a compression format for efficiently representing HTTP header fields) for data compression.
+  . Since, it uses binary format there is not longer a risk with response splitting attacks which happens in HTTP1.1.
+
+2. Write a blog about objects and its internal representation in Javascript
+-> Object is a special type of data that allows you to store the data. 
+-> Object is a reference data type.
+-> Objects in javascript is an unordered collection of data in the form of key:value pairs.
+-> Creating Objects:
+  . By object literal:
+    let person = {
+	 'name': 'Someone',
+ 	 'age': 45,
+	 'gender': 'Female',
+	 'occupation': 'Teacher',
+    }
+  . By using new keyword:
+	let person1 = new Objecr();
+-> Accessing Javascripts objects
+ . let person = {
+	 'name': 'Someone',
+ 	 'age': 45,
+	 'gender': 'Female',
+	 'occupation': 'Teacher',
+    }
+ . Using dot notation
+   console.log(person.name); // 'Someone'
+ . Using [] notation
+   console.log(person['age']); // 45
+
